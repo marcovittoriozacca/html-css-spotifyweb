@@ -7,6 +7,9 @@
 html{
     font-family: sans-serif;
 }
+body{
+    background-color: red;
+}
 a{
     text-decoration: none;
     color: black;
@@ -35,11 +38,17 @@ ul{
 aside{
     background-color:#000000;
     height: calc(100vh - 50px);
-    padding: 5px 10px;
+    padding: 5px 15px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
 }
 
 aside > div ul{
@@ -59,7 +68,7 @@ aside > div ul{
 
 hr{
     border: 1px solid black;
-    padding-block: 10px;
+    padding-block: 5px;
 }
 
 
@@ -73,14 +82,99 @@ hr{
 aside svg{
     width: 30px;
 }
+aside .download{
+    width: 20px;
+    fill: gray;
+}
+aside .download:hover{
+    fill: white;
+}
 
 /* --------------------------------------------------------------- */
 
-
+/* main elements */
 main{
     background-color: #141922;
     width: 100%;
+    margin-left: 60px;
+    height: calc(100vh - 50px);
 }
+
+main .upgrade{
+    background-color: #090B12;
+    text-align: right;
+    padding:35px 5px;
+
+}
+main .upgrade a{
+    color: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    transition-duration: 0s;
+    transition-property: font-size;
+    transition-timing-function: linear;
+}
+main .upgrade a:hover{
+    font-size: 0.9rem;
+}
+
+/* main nav */
+main nav{
+    padding-block: 20px;
+}
+main nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    row-gap: 40px;
+
+}
+main nav ul a{
+    color: gray;
+    font-size: 0.9rem;    
+}
+main nav ul a:hover{
+    color: white;
+}
+
+/* main content */
+main{
+    overflow: auto;
+}
+
+main .main-content .main-container{
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto;
+}
+main div.recently-played .flex-cards{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+}
+main div.recently-played .flex-cards .card{
+    width: calc((100% / 2) - (15px / 2));
+}
+div.img{
+    /* width: 200px; */
+    aspect-ratio: 1;
+    background-image: url(../img/metal_lifting.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/* --------------------------------------------------------------- */
+
+/* footer elements */
 footer{
     height: 50px;
     background-color: gray;
@@ -148,10 +242,6 @@ footer{
         cursor: pointer;
     }
 
-    aside .bottom-elements li i:hover{
-        color: white;
-        border: 1px solid white;
-    }
 
     .plus{
         width: 40px;
