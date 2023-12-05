@@ -2,9 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 html{
     font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
 }
 
 /* utilities */
@@ -12,33 +21,61 @@ html{
     display: none;
 }
 
-ul{
-    list-style-type: none;
-}
-
 /* general */
 #spotify-app{
     height: 100vh;
 }
 
-.aside-container{
+/* aside elements */
+.container{
     display: flex;
+
 }
-
-aside img{
-    width: 25px;
-}
-
-
 
 aside{
     background-color:#000000;
+    height: calc(100vh - 50px);
+    padding: 5px 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 50px);
-    padding-inline: 10px;
 }
+
+aside > div ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 5px;
+}
+
+.user-icon{
+    background-color: gray;
+    border-radius: 50%;
+    aspect-ratio: 1;
+
+}
+
+hr{
+    border: 1px solid black;
+    padding-block: 10px;
+}
+
+
+.fa-arrow-down{
+    color: gray;
+    border: 1px solid gray;
+    font-size: 7px;
+    padding:2px 2.7px;
+    border-radius: 50%;
+}
+aside svg{
+    width: 30px;
+}
+
+/* --------------------------------------------------------------- */
+
 
 main{
     background-color: #141922;
@@ -57,4 +94,121 @@ footer{
     align-items: center;
     padding-inline:10px;
 }
+/* ------------------------------------------------------------------ */
 
+/* media query */
+
+/* small = ≥576px */
+@media screen and (min-width: 576px) {
+
+    aside ul li,
+    aside ul li a,
+    aside span{
+        color: gray;
+    }
+
+    aside svg.block{
+        display: none;
+    }
+    .hide{
+        display: block;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    aside div.playlist,
+    aside .playlist-names{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    aside .playlist-names{
+        gap: 20px;
+        overflow: auto;
+    }
+
+
+    aside div.playlist h5{
+        color: white;
+        font-size: 0.8rem;
+    }
+    .playlist-text{
+        font-size: 0.9rem;
+    }
+    aside div.playlist .create-playlist{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .white-h:hover,
+    aside .bottom-elements li:hover,
+    aside span:hover,
+    .playlist-names li:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+    aside .bottom-elements li i:hover{
+        color: white;
+        border: 1px solid white;
+    }
+
+    .plus{
+        width: 40px;
+        font-size: 30px;
+        text-align: center;
+        aspect-ratio: 1;
+        font-weight: bold;
+        background-color: gray;
+        color: black;
+    }
+    .plus:hover{
+        background-color: white;
+    }
+    
+    aside svg.hide{
+        display: block;
+        width: 120px;
+        margin-right: 70px;
+        margin-bottom: 20px;
+    }
+
+    aside > div ul.utility-element,
+    aside > div ul.bottom-elements,
+    aside > div .playlist{
+        align-items: flex-start;
+        padding-left: 15px;
+    }
+
+    aside ul.utility-element{
+        margin-block: 15px 25px;
+    }
+    
+    aside > div ul li,
+    aside a.install{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    aside .profile-name,
+    aside ul li.home span.hide{
+        color: white;
+        font-weight: bold;
+    }
+    li.home{
+        border-left: 3px solid #ADFF2E;
+        margin-left: -13px;
+        padding-left: 10px;
+    }
+    li.bottom-divisor{
+        display: none;
+    }
+    .profile{
+        border-top: 1px solid gray;
+        padding-top: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+}
