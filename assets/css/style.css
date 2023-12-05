@@ -98,6 +98,7 @@ main{
     width: 100%;
     margin-left: 60px;
     height: calc(100vh - 50px);
+    overflow: auto;
 }
 
 main .upgrade{
@@ -135,38 +136,93 @@ main nav ul{
 }
 main nav ul a{
     color: gray;
-    font-size: 0.9rem;    
+    font-size: 0.9rem;   
+    font-weight: bold; 
 }
 main nav ul a:hover{
     color: white;
 }
 
 /* main content */
-main{
-    overflow: auto;
-}
-
 main .main-content .main-container{
     width: 95%;
     margin: 0 auto;
-    overflow: auto;
 }
 main div.recently-played .flex-cards{
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
 
 }
-main div.recently-played .flex-cards .card{
-    width: calc((100% / 2) - (15px / 2));
+
+main h2{
+    color: white;
+    padding-block: 30px;
 }
-div.img{
-    /* width: 200px; */
+main div.recently-played .flex-cards .card{
+    width: calc((100% / 2) - (10px / 2));
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .flex-cards .card h3{
+    font-weight: bold;
+    color: white;
+}
+main .flex-cards .card h5{
+    font-weight: bold;
+    color: gray;
+}
+
+div.bg{
     aspect-ratio: 1;
-    background-image: url(../img/metal_lifting.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.play-hover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.play-hover:hover{
+    opacity: 1;
+}
+.play-hover i{
+    color: white;
+    border: 6px solid white;
+    font-size: 25px;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+div.metal{
+    background-image: url(../img/metal_lifting.jpg);
+}
+div.stranger-things{
+    background-image: url(../img/stranger.jpeg);
+}
+div.quiet-place{
+    background-image: url(../img/aquietplace.jpeg);
+}
+div.split{
+    background-image: url(../img/split.jpeg);
+}
+div.cure{
+    background-image: url(../img/cure.jpeg);
+}
+div.sinister{
+    background-image: url(../img/sinister.jpeg);
 }
 
 
@@ -192,7 +248,7 @@ footer{
 
 /* media query */
 
-/* small = ≥576px */
+/* small = min 576px */
 @media screen and (min-width: 576px) {
 
     aside ul li,
@@ -300,5 +356,29 @@ footer{
         margin-top: 10px;
         width: 100%;
     }
+    /* -------------------------------- */
+    /* main elements */
+    main{
+        margin-left: 230px;
+
+    }
     
+}
+
+/* ---------------------------------------------------------------- */
+/* md = min 768px */
+@media screen and (min-width: 768px){
+    main div.recently-played .flex-cards .card{
+        width: calc((100% / 4) - (30px / 4));
+
+    }
+}
+
+/* ---------------------------------------------------------------- */
+/* md = min 1100px */
+@media screen and (min-width: 1100px){
+    main div.recently-played .flex-cards .card{
+        width: calc((100% / 6) - (50px / 6));
+
+    }
 }
