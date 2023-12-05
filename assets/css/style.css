@@ -148,18 +148,21 @@ main .main-content .main-container{
     width: 95%;
     margin: 0 auto;
 }
-main div.recently-played .flex-cards{
+main .flex-cards{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 
 }
 
-main h2{
-    color: white;
+main .recently-played h2{
     padding-block: 30px;
 }
-main div.recently-played .flex-cards .card{
+h2{
+    color: white;
+}
+
+main .flex-cards .card{
     width: calc((100% / 2) - (10px / 2));
     text-align: center;
 
@@ -172,7 +175,7 @@ main .flex-cards .card h3{
     font-weight: bold;
     color: white;
 }
-main .flex-cards .card h5{
+main h5{
     font-weight: bold;
     color: gray;
 }
@@ -187,7 +190,7 @@ div.bg{
 .play-hover{
     width: 100%;
     height: 100%;
-    background-color: rgba(128, 128, 128, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,14 +201,21 @@ div.bg{
 }
 .play-hover i{
     color: white;
-    border: 6px solid white;
+    border: 4px solid white;
     font-size: 25px;
-    padding: 1rem 1.2rem;
+    padding: 0.7rem 0.9rem;
     border-radius: 50%;
     cursor: pointer;
 }
 
+main .head-row{
+    padding-block:35px 25px;
+}
+main .for-you .head-row h2{
+    padding-bottom:10px;
+}
 
+/* recently played bg */
 div.metal{
     background-image: url(../img/metal_lifting.jpg);
 }
@@ -223,6 +233,14 @@ div.cure{
 }
 div.sinister{
     background-image: url(../img/sinister.jpeg);
+}
+
+/* for you bg */
+div.for-you-radar{
+    background-image: url(../img/radar.jpeg);
+}
+div.daily-mix{
+    background-image: url(../img/mixdaily.jpeg);
 }
 
 
@@ -368,16 +386,19 @@ footer{
 /* ---------------------------------------------------------------- */
 /* md = min 768px */
 @media screen and (min-width: 768px){
-    main div.recently-played .flex-cards .card{
+    main .flex-cards .card{
         width: calc((100% / 4) - (30px / 4));
+    }
 
+    main .flex-cards .card h3{
+        font-size: 0.9rem;
     }
 }
 
 /* ---------------------------------------------------------------- */
 /* md = min 1100px */
 @media screen and (min-width: 1100px){
-    main div.recently-played .flex-cards .card{
+    main .flex-cards .card{
         width: calc((100% / 6) - (50px / 6));
 
     }
