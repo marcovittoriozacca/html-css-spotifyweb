@@ -196,6 +196,9 @@ div.bg{
     align-items: center;
     opacity: 0;
 }
+.most-popular .play-hover:hover{
+    border-radius: 50%;
+}
 .play-hover:hover{
     opacity: 1;
 }
@@ -208,10 +211,11 @@ div.bg{
     cursor: pointer;
 }
 
+
 main .head-row{
-    padding-block:35px 25px;
+    padding-block:40px 25px;
 }
-main .for-you .head-row h2{
+main .head-row h2{
     padding-bottom:10px;
 }
 
@@ -243,6 +247,15 @@ div.daily-mix{
     background-image: url(../img/mixdaily.jpeg);
 }
 
+/* most popular artists bg */
+div.lana-del-rey{
+    background-image: url(../img/youg.jpeg);
+    border-radius: 50%;
+}
+div.einaudi{
+    background-image: url(../img/einaudi.jpeg);
+    border-radius: 50%;
+}
 
 
 
@@ -378,7 +391,11 @@ footer{
     /* main elements */
     main{
         margin-left: 230px;
-
+        padding-bottom: 50px;
+    }
+    main .main-content .main-container{
+        width: 90%;
+        margin: 0 auto;
     }
     
 }
@@ -401,5 +418,9 @@ footer{
     main .flex-cards .card{
         width: calc((100% / 6) - (50px / 6));
 
+    }
+
+    main nav ul{
+        gap: 40px;
     }
 }
