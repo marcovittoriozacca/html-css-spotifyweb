@@ -37,7 +37,7 @@ ul{
 
 aside{
     background-color:#000000;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 85px);
     padding: 5px 15px;
 
     display: flex;
@@ -262,19 +262,103 @@ div.einaudi{
 /* --------------------------------------------------------------- */
 
 /* footer elements */
+
 footer{
-    height: 50px;
-    background-color: gray;
+    color: white;
+    background-color: #282828;
+    padding:10px 5px;
+    
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline:10px;
 }
+footer h6{
+    color: gray;
+}
+footer svg{
+    fill: white;
+}
+footer .footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* left player elements */
+footer .footer-container .left-player{
+    width: 25%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+footer .footer-container .left-player .current-song-img img{
+    width: 40px;
+}
+footer .footer-container .left-player .left-player-icons svg:hover{
+    fill: white;
+    cursor: pointer;
+}
+
+/* center player elements */
+footer .footer-container .center-player{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+footer .footer-container .center-player .player-command{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+footer .footer-container .center-player .player-command svg{
+    height: 15px;
+    width: 15px;
+}
+
+footer .footer-container .center-player .player-command svg.play-icon{
+    height: 25px;
+    width: 25px;
+}
+footer .footer-container .center-player .player-info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    min-width: 70%;
+
+}
+footer .footer-container .center-player .player-info input{
+    width: 100%;
+}
+
+
+/* right player elements */
+footer .footer-container .right-player{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+
+footer .footer-container .right-player svg{
+    height: 15px;
+    width: 15px;
+}
+
+footer .footer-container .right-player .right-player-icons{
+    display: flex;
+    gap: 20px;
+}
+footer .footer-container .right-player input{
+    width: 100%;
+}
+
 /* ------------------------------------------------------------------ */
 
 /* media query */
@@ -333,7 +417,11 @@ footer{
     .plus{
         width: 40px;
         font-size: 30px;
-        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         aspect-ratio: 1;
         font-weight: bold;
         background-color: gray;
@@ -391,8 +479,10 @@ footer{
     /* main elements */
     main{
         margin-left: 230px;
+        height: calc(100vh - 85px);
         padding-bottom: 50px;
     }
+
     main .main-content .main-container{
         width: 90%;
         margin: 0 auto;
@@ -403,12 +493,51 @@ footer{
 /* ---------------------------------------------------------------- */
 /* md = min 768px */
 @media screen and (min-width: 768px){
+    aside{
+        height: calc(100vh - 100px);
+    }
+    main{
+        height: calc(100vh - 100px);
+    }
     main .flex-cards .card{
         width: calc((100% / 4) - (30px / 4));
     }
 
     main .flex-cards .card h3{
         font-size: 0.9rem;
+    }
+    footer .footer-container .center-player .player-command svg.play-icon{
+        height: 40px;
+        width: 40px;
+    }
+    footer .footer-container .center-player .player-command svg{
+        height: 25px;
+        width: 25px;
+    }
+    footer .footer-container .center-player .player-command{
+        gap: 32px;
+    }
+    footer .footer-container .left-player{
+        width: 25%;
+        display: flex;
+        gap: 20px;
+    }
+    footer .footer-container .left-player .current-song-img img{
+        width: 60px;
+    
+    }
+    footer .footer-container .left-player .song-name{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    footer .footer-container .left-player .left-player-icons{
+        display: flex;
+        gap: 10px;
+    }
+    footer .footer-container .center-player .player-info{
+        font-size: 1.1rem;
+        gap: 10px;
     }
 }
 
@@ -422,5 +551,15 @@ footer{
 
     main nav ul{
         gap: 40px;
+    }
+
+    footer .footer-container .right-player{
+        flex-direction: row;
+    }
+    footer .footer-container .right-player .right-player-icons{
+        gap: 10px;
+    }
+    footer .footer-container .right-player input{
+        max-width: 70%;
     }
 }
