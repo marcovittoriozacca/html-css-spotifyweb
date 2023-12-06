@@ -48,6 +48,7 @@ aside{
     top: 0;
     left: 0;
     bottom: 0;
+    z-index: 999;
 
 }
 
@@ -102,9 +103,11 @@ main{
     background-color: #141922;
     width: 100%;
     margin-left: 60px;
+    padding-top: 100px;
     padding-right: 10px;
     height: calc(100vh - 50px);
     padding-bottom: 55px;
+
     overflow: auto;
 }
 
@@ -113,6 +116,10 @@ main .upgrade{
     text-align: right;
     padding:35px 20px;
 
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:60px;
 }
 main .upgrade a{
     color: white;
@@ -139,7 +146,6 @@ main nav ul{
     justify-content: center;
     gap: 15px;
     row-gap: 40px;
-
 }
 main nav ul a{
     color: gray;
@@ -148,7 +154,6 @@ main nav ul a{
 }
 main nav ul a.nav-selected-element{
     padding-bottom: 10px;
-    /* background:linear-gradient(to right, #141922 25%, #ADFF2E 50%, #141922 25%) bottom; */
     background: linear-gradient(to right, #141922 20%, #ADFF2E 20%, #ADFF2E 75%, #141922 75%) bottom;
     background-repeat: no-repeat;
     background-size:100% 3px; 
@@ -519,6 +524,10 @@ footer .footer-container .right-player input{
         margin: 0 auto;
     }
     
+    main .upgrade{
+        right: 0;
+        left: 235px;
+    }
 }
 
 /* ---------------------------------------------------------------- */
