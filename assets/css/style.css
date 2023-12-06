@@ -8,7 +8,7 @@ html{
     font-family: sans-serif;
 }
 body{
-    background-color: red;
+    background-color: black;
 }
 a{
     text-decoration: none;
@@ -37,8 +37,8 @@ ul{
 
 aside{
     background-color:#000000;
-    height: calc(100vh - 85px);
-    padding: 5px 15px;
+    height: calc(100vh - 81px);
+    padding: 10px 15px;
 
     display: flex;
     flex-direction: column;
@@ -58,12 +58,24 @@ aside > div ul{
     
     gap: 5px;
 }
+aside div ul.utility-element .search,
+aside div ul.utility-element .library{
+    fill: gray;
+}
+aside div ul.utility-element .search:hover,
+aside div ul.utility-element .library:hover{
+    fill: white;
+    cursor: pointer;
+}
 
 .user-icon{
     background-color: gray;
     border-radius: 50%;
     aspect-ratio: 1;
-
+}
+.user-icon:hover{
+    cursor: pointer;
+    background-color: rgb(162, 162, 162);
 }
 
 hr{
@@ -71,17 +83,10 @@ hr{
     padding-block: 5px;
 }
 
-
-.fa-arrow-down{
-    color: gray;
-    border: 1px solid gray;
-    font-size: 7px;
-    padding:2px 2.7px;
-    border-radius: 50%;
-}
 aside svg{
     width: 30px;
 }
+
 aside .download{
     width: 20px;
     fill: gray;
@@ -97,14 +102,16 @@ main{
     background-color: #141922;
     width: 100%;
     margin-left: 60px;
+    padding-right: 10px;
     height: calc(100vh - 50px);
+    padding-bottom: 55px;
     overflow: auto;
 }
 
 main .upgrade{
     background-color: #090B12;
     text-align: right;
-    padding:35px 5px;
+    padding:35px 20px;
 
 }
 main .upgrade a{
@@ -137,10 +144,23 @@ main nav ul{
 main nav ul a{
     color: gray;
     font-size: 0.9rem;   
-    font-weight: bold; 
+    font-weight: bold;    
+}
+main nav ul a.nav-selected-element{
+    padding-bottom: 10px;
+    /* background:linear-gradient(to right, #141922 25%, #ADFF2E 50%, #141922 25%) bottom; */
+    background: linear-gradient(to right, #141922 20%, #ADFF2E 20%, #ADFF2E 75%, #141922 75%) bottom;
+    background-repeat: no-repeat;
+    background-size:100% 3px; 
 }
 main nav ul a:hover{
     color: white;
+
+    padding-bottom: 10px;
+    /* background:linear-gradient(to right, #141922 25%, #ADFF2E 50%, #141922 25%) bottom; */
+    background: linear-gradient(to right, #141922 20%, #ADFF2E 20%, #ADFF2E 75%, #141922 75%) bottom;
+    background-repeat: no-repeat;
+    background-size:100% 3px; 
 }
 
 /* main content */
@@ -202,13 +222,9 @@ div.bg{
 .play-hover:hover{
     opacity: 1;
 }
-.play-hover i{
-    color: white;
-    border: 4px solid white;
-    font-size: 25px;
-    padding: 0.7rem 0.9rem;
-    border-radius: 50%;
+.play-hover svg:hover{
     cursor: pointer;
+
 }
 
 
@@ -277,6 +293,10 @@ footer{
 footer h6{
     color: gray;
 }
+footer h6:hover{
+    color: white;
+    cursor: pointer;
+}
 footer svg{
     fill: white;
 }
@@ -294,6 +314,10 @@ footer .footer-container .left-player{
 }
 footer .footer-container .left-player .current-song-img img{
     width: 40px;
+}
+
+footer .footer-container .left-player .left-player-icons svg{
+    fill: gray;
 }
 footer .footer-container .left-player .left-player-icons svg:hover{
     fill: white;
@@ -386,9 +410,14 @@ footer .footer-container .right-player input{
         flex-direction: column;
         gap: 15px;
     }
+
     aside .playlist-names{
+        align-items: flex-start;
         gap: 20px;
-        overflow: auto;
+
+        width: 100%;
+        max-height: 250px;
+        overflow-y: scroll;
     }
 
 
@@ -429,6 +458,7 @@ footer .footer-container .right-player input{
     }
     .plus:hover{
         background-color: white;
+        cursor: pointer;
     }
     
     aside svg.hide{
@@ -463,8 +493,9 @@ footer .footer-container .right-player input{
     }
     li.home{
         border-left: 3px solid #ADFF2E;
-        margin-left: -13px;
-        padding-left: 10px;
+        padding-left: 26px;
+        margin-left: -30px;
+
     }
     li.bottom-divisor{
         display: none;
@@ -479,7 +510,7 @@ footer .footer-container .right-player input{
     /* main elements */
     main{
         margin-left: 230px;
-        height: calc(100vh - 85px);
+        height: calc(100vh - 81px);
         padding-bottom: 50px;
     }
 
