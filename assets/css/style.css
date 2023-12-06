@@ -63,10 +63,19 @@ aside div ul.utility-element .search,
 aside div ul.utility-element .library{
     fill: gray;
 }
-aside div ul.utility-element .search:hover,
-aside div ul.utility-element .library:hover{
-    fill: white;
+.search:hover,
+.search:hover svg,
+.search:hover span,
+.library:hover,
+.library:hover svg,
+.library:hover span,
+.bottom-elements li:first-child:hover svg,
+.bottom-elements li:first-child:hover span,
+.bottom-elements li.profile:hover,
+.bottom-elements li.profile:hover .user-icon{
     cursor: pointer;
+    color: white;
+    fill: white;
 }
 
 .user-icon{
@@ -74,8 +83,7 @@ aside div ul.utility-element .library:hover{
     border-radius: 50%;
     aspect-ratio: 1;
 }
-.user-icon:hover{
-    cursor: pointer;
+.bottom-elements li.profile:hover .user-icon{
     background-color: rgb(162, 162, 162);
 }
 
@@ -91,9 +99,6 @@ aside svg{
 aside .download{
     width: 20px;
     fill: gray;
-}
-aside .download:hover{
-    fill: white;
 }
 
 /* --------------------------------------------------------------- */
@@ -127,7 +132,7 @@ main .upgrade a{
     border-radius: 50px;
     font-size: 0.8rem;
     transition-duration: 0.1s;
-    transition-property: font-size;
+    transition-property: all;
     transition-timing-function: linear;
 }
 main .upgrade a:hover{
@@ -220,17 +225,14 @@ div.bg{
     align-items: center;
     opacity: 0;
 }
-.most-popular .play-hover:hover{
+.most-popular .play-hover:hover,
+.most-popular .play-hover{
     border-radius: 50%;
 }
 .play-hover:hover{
     opacity: 1;
-}
-.play-hover svg:hover{
     cursor: pointer;
-
 }
-
 
 main .head-row{
     padding-block:40px 25px;
@@ -369,7 +371,7 @@ footer .footer-container .center-player .player-info{
     width: 100%;
     height: 5px;
     background-color: #595959ff;
-    
+    cursor: pointer;
     border-radius: 40px;
 }
 .ligther-music-bar{
@@ -384,6 +386,7 @@ footer .footer-container .center-player .player-info{
 
 .music-bar:hover .ligther-music-bar{
     background-color: #ADFF2E;
+    
 }
 
 .music-bar:hover .music-circle{
@@ -452,6 +455,7 @@ footer .footer-container .right-player .music-bar{
         font-weight: bold;
         font-size: 0.8rem;
     }
+
     aside div.playlist,
     aside .playlist-names{
         display: flex;
@@ -482,9 +486,15 @@ footer .footer-container .right-player .music-bar{
         gap: 10px;
     }
 
-    .white-h:hover,
-    aside .bottom-elements li:hover,
-    aside span:hover,
+    .create-playlist:hover .plus{
+        background-color: white;
+    }
+    .create-playlist:hover .playlist-text,
+    .create-playlist:hover{
+        cursor: pointer;
+        color: white;
+    }
+
     .playlist-names li:hover{
         color: white;
         cursor: pointer;
@@ -504,10 +514,7 @@ footer .footer-container .right-player .music-bar{
         background-color: gray;
         color: black;
     }
-    .plus:hover{
-        background-color: white;
-        cursor: pointer;
-    }
+
     
     aside svg.hide{
         display: block;
