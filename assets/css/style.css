@@ -27,12 +27,12 @@ ul{
 /* general */
 #spotify-app{
     height: 100vh;
+    width: 100vw;
 }
 
 /* aside elements */
 .container{
-    display: flex;
-
+    display: flex; 
 }
 
 aside{
@@ -107,7 +107,6 @@ main{
     padding-right: 10px;
     height: calc(100vh - 50px);
     padding-bottom: 55px;
-
     overflow: auto;
 }
 
@@ -127,7 +126,7 @@ main .upgrade a{
     padding: 10px 30px;
     border-radius: 50px;
     font-size: 0.8rem;
-    transition-duration: 0s;
+    transition-duration: 0.1s;
     transition-property: font-size;
     transition-timing-function: linear;
 }
@@ -301,6 +300,7 @@ footer h6{
 footer h6:hover{
     color: white;
     cursor: pointer;
+    text-decoration: underline;
 }
 footer svg{
     fill: white;
@@ -346,6 +346,10 @@ footer .footer-container .center-player .player-command svg{
     height: 15px;
     width: 15px;
 }
+footer .footer-container .center-player .player-command svg:hover{
+    cursor: pointer;
+    fill: #ADFF2E;
+}
 
 footer .footer-container .center-player .player-command svg.play-icon{
     height: 25px;
@@ -354,15 +358,48 @@ footer .footer-container .center-player .player-command svg.play-icon{
 footer .footer-container .center-player .player-info{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     font-weight: bold;
     font-size: 0.8rem;
     min-width: 70%;
+}
 
-}
-footer .footer-container .center-player .player-info input{
+.music-bar{
     width: 100%;
+    height: 5px;
+    background-color: #595959ff;
+    
+    border-radius: 40px;
 }
+.ligther-music-bar{
+    background-color: #c2c2c2ff;
+    height: 100%;
+    width: 25%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.music-bar:hover .ligther-music-bar{
+    background-color: #ADFF2E;
+}
+
+.music-bar:hover .music-circle{
+    display: block;
+}
+
+.music-circle{
+    display: none;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: #c2c2c2ff;
+
+    border-radius: 50%;
+}
+
+
 
 
 /* right player elements */
@@ -371,6 +408,7 @@ footer .footer-container .right-player{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     gap:10px;
 }
 
@@ -380,12 +418,17 @@ footer .footer-container .right-player svg{
     width: 15px;
 }
 
+footer .footer-container .right-player svg:hover{
+    cursor: pointer;
+    fill: gray;
+}
+
 footer .footer-container .right-player .right-player-icons{
     display: flex;
     gap: 20px;
 }
-footer .footer-container .right-player input{
-    width: 100%;
+footer .footer-container .right-player .music-bar{
+    max-width: 130px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -538,6 +581,9 @@ footer .footer-container .right-player input{
     }
     main{
         height: calc(100vh - 100px);
+    }
+    main .main-content .main-container{
+        width: 96%;
     }
     main .flex-cards .card{
         width: calc((100% / 4) - (30px / 4));
